@@ -1,0 +1,15 @@
+.header{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ecf6ff;
+}
+.header__logo{
+    color : #71758d;
+    cursor: pointer;
+}
+
+.header__navigation > ul{
+    list-style: none;
+}

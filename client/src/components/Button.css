@@ -1,0 +1,31 @@
+.btn{
+    font-size: 16px;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.primary{
+    background-color: #5e60fa;
+}
+.outline{
+    background-color: transparent;
+}
+.white{
+    color: white;
+    border: 1px solid #5e60fa;
+    transition: all .2s ease-out;
+}
+.purple{
+    color : #5e60fa;
+    border: 1px solid #5e60fa;
+    transition: all .2s ease-out;
+}
+.white:hover{
+    color: #5e60fa;
+    background-color: white;
+}
+.purple:hover{
+    color: white;
+    background-color: #5e60fa;
+}

@@ -1,0 +1,49 @@
+.homepage{
+    padding: 20px 0 20px 20px;
+    display: flex;
+    align-items: center;
+    height: calc(100vh - 84px);
+}
+.homepage__message{
+    display: flex;
+    flex-direction: column;
+    color: #3a3a40;
+    justify-content: center;
+    flex: 40%;
+    margin-left: 40px;
+}
+.homepage__message-heading{
+    font-size: 60px;
+    font-weight: 500;
+    line-height: 65px;
+}
+.last{
+    margin-bottom: 18px;
+}
+.homepage__message-text{
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 8px;
+}
+.homepage__image{
+    flex: 60%;
+    background-color: #DFEFFD;
+    position: relative;
+    height: calc(100vh - 84px);
+}
+.homepage__image > div{
+    top:25%;
+    left : -25%;
+    position: absolute;
+    border-radius: 500px;
+    border: 1px solid #d5d5d5;
+    background: transparent;
+    z-index: 10;
+    padding: 16px;
+  
+}
+.homepage__image >div>img{
+    width : 400px;
+    height: 400px;
+    border-radius: 500px;
+}
