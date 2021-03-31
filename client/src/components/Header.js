@@ -1,5 +1,6 @@
 import React from 'react'
 import FingerprintIcon from '@material-ui/icons/Fingerprint';
+import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { Button } from "./Button";
 import "./Header.css";
@@ -8,7 +9,7 @@ const Header = (props) => {
     return (
         <div className="header">
             <div className="header__logo">
-                <FingerprintIcon />
+                <Link to = {props.auth === false? "/":"/surveys"}><FingerprintIcon /></Link>
             </div>
             <nav className="header__navigation">
                <ul>
