@@ -12,4 +12,9 @@
 
 .header__navigation > ul{
     list-style: none;
+    display: flex;
+    align-items: center;
+}
+.header__navigation-item{
+    padding: 5px;
 }
