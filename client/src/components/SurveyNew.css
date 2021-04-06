@@ -1,0 +1,35 @@
+
+.surveynew__form{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    width: 80%;
+    margin: 0 auto;
+}
+.surveynew__form-label{
+    margin-bottom: 5px;
+}
+.surveynew__form-input{
+    margin-bottom: 15px;
+    padding: 10px;
+    height:70px;
+    border: 1px solid #b4b4b4;
+    outline: none;
+}
+
+.surveynew__form-input:active{
+    outline: none;
+}
+.surveynew__form > Button{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.surveynew__form-error{
+    color: #ff6d53;
+    font-size: 12px;
+    margin-bottom: 15px;
+    padding:  0 10px;
+}

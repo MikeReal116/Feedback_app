@@ -33,3 +33,8 @@
     color: #000;
     border: 1px solid rgba(0, 0, 0, 0.705);
 }
+.green{
+    background-color: #1AAA55;
+    color: white;
+    border: none;
+}
