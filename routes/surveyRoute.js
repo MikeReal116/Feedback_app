@@ -8,6 +8,10 @@ sgMail.setApiKey(keys.sendGridKey);
 
 const Survey = mongoose.model("surveys");
 module.exports = (app) =>{
+
+    app.get("/api/feedback", (req,res)=>{
+        res.send("Thanks for sharing your feedback");
+    }) ;
     app.post("/api/surveys", checkLogin, checkCredit, async (req, res) =>{
         const {title, subject, body, recipient} = req.body;
         const surveyrecipients = recipient.split(",");

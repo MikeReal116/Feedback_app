@@ -1,0 +1,16 @@
+.dashboard{
+    height: calc(100vh - 84px);
+    position: relative;
+    padding: 20px;
+}
+.dashboard__icon{
+    position: absolute;
+    right: 0%;
+    bottom: 5%;
+    background-color: #5e60fa;
+    padding: 5px;
+    border-radius: 1000px;
+}
+.dashboard__icon-add{
+    color: #fff;;
+}

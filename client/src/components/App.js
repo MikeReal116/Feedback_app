@@ -6,6 +6,7 @@ import { fetchUser } from "../actions";
 import './App.css';
 import Dashboard from "./Dashboard";
 import Homepage from "./Homepage";
+import SurveyNew from "./SurveyNew";
 
 function App(props) {
 
@@ -21,6 +22,7 @@ function App(props) {
           <Header />
           <Route path="/" exact component = {Homepage}/>
           <Route path = "/surveys" exact component={Dashboard}/>
+          <Route path ="/survey/new" exact component={SurveyNew}/>
       </div>
       </BrowserRouter>
     </div>
