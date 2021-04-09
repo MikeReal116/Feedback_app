@@ -43,8 +43,8 @@ const SurveyNew = (props) => {
             recipient:""
         }, 
         validate,
-        onSubmit: values =>{
-            props.postSurvey(values);
+        onSubmit: async values =>{
+           await props.postSurvey(values);
             history.push("/surveys");
         }
         

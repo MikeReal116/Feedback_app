@@ -4,6 +4,10 @@
     align-items: center;
     justify-content: space-between;
     background-color: #ecf6ff;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 12;
 }
 .header__logo{
     color : #71758d;

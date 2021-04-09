@@ -16,6 +16,9 @@
     border: 1px solid #5e60fa;
     transition: all .2s ease-out;
 }
+.secondary{
+    background-color: tomato;
+}
 .purple{
     color : #5e60fa;
     border: 1px solid #5e60fa;
@@ -37,4 +40,7 @@
     background-color: #1AAA55;
     color: white;
     border: none;
+}
+.plain{
+    color: white;
 }

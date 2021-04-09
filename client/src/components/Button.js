@@ -3,8 +3,8 @@ import "./Button.css"
 
 export const Button = ({buttonStyle, buttonColor, children, onClick, type}) =>{
     
-    const STYLES = ["primary", "secondary", "outline", "none"];
-    const COLOURS = ["white", "purple","black", "green"];
+    const STYLES = ["primary", "secondary", "outline", "none", ];
+    const COLOURS = ["white", "purple","black", "plain", "red","green"];
 
     const setButtonStyle = STYLES.includes(buttonStyle) ? buttonStyle: STYLES[0];
     const setButtonColor = COLOURS.includes(buttonColor) ? buttonColor: COLOURS[0];

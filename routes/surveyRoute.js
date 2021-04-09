@@ -7,7 +7,6 @@ const checkCredit = require("../middlewares/checkCredit");
 const emailTemplate = require("../services/emailTemplate");
 const keys = require("../config/keys");
 const sgMail = require("@sendgrid/mail");
-const { rest } = require("lodash");
 sgMail.setApiKey(keys.sendGridKey);
 
 const Survey = mongoose.model("surveys");
@@ -16,6 +15,16 @@ module.exports = (app) =>{
     app.get("/api/surveys/:surveyId/:choice", (req,res)=>{
         res.send("Thanks for sharing your feedback");
     }) ;
+
+   app.get("/api/delete/:id", checkLogin, async(req,res)=>{
+     await Survey.findByIdAndRemove(req.params.id).exec();
+      res.send({});
+   });
+
+    app.get("/api/surveys", checkLogin, async(req,res)=>{
+       const survey = await Survey.find({_creator : req.user._id}).select({recipient:false});
+        res.send(survey);
+    })
 
     app.post("/api/surveys/webhook", (req, res) => {
         const path = new Path("/api/surveys/:surveyId/:choice");
@@ -45,7 +54,7 @@ module.exports = (app) =>{
             ).exec();
         })
         .value()
-        rest.send({});
+        res.send({});
     });
 
     app.post("/api/surveys", checkLogin, checkCredit, async (req, res) =>{
@@ -56,6 +65,7 @@ module.exports = (app) =>{
             title,
             subject,
             body,
+            _creator:req.user._id,
             recipient : surveyrecipients.map(email=>({email}))
         });
 
