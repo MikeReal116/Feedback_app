@@ -10,7 +10,8 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "webhook": "lt -p 5000 -s finlandisinghanaat64"
+    "webhook": "lt -p 5000 -s finlandisinghanaat64",
+    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "author": "",
   "license": "ISC",

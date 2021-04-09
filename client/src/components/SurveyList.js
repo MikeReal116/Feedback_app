@@ -8,6 +8,7 @@ import "./SurveyList.css";
 
 
 const SurveyList = (props) => {
+    
     const history = useHistory();
     const {surveys} = props
     useEffect(()=>{
